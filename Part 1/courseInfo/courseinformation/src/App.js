@@ -4,6 +4,12 @@ const Header = (props) => {
   )
 }
 
+const Part = (props) => {
+  return (
+    <p>{props.row}</p>
+  )
+}
+
 const Content = (props) => {
   const rows = []
   for (let i = 0; i < 3; i++) {
@@ -11,7 +17,12 @@ const Content = (props) => {
   }  
   return (
     <div>
+      1.1 version
       {rows}
+      1.2 version
+      <Part row={rows[0]}/>
+      <Part row={rows[1]}/>
+      <Part row={rows[2]}/>
     </div>
   )
 }
