@@ -3,7 +3,7 @@
 Testing creating a sequence diagram
 
 ```mermaid
-sequenceDiagram TD;
+graph TD;
     A-->B;
     A-->C;
     B-->D;
