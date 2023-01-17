@@ -13,4 +13,7 @@ sequenceDiagram
     iframe->>dotcom: iframe ready
     dotcom->>iframe: set mermaid data on iframe
     iframe->>iframe: render mermaid
+    
+      Note right of dotcom: The browser executes the callback function that renders the notes 
+    
 ```
