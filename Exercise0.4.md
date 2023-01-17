@@ -6,19 +6,20 @@ sequenceDiagram
     
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note left of server: The server pushes the note in the form to an array in the server
-    server-->>browser: Redirects to https://studies.cs.helsinki.fi/exampleapp/note
-    deactivate server
-    
-
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
+    Note left of server: The server pushes the note in the Form to an array in the server
+    server-->>browser: Redirects to https://studies.cs.helsinki.fi/exampleapp/note using status code 302
     deactivate server
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
     server-->>browser: the css file
+    deactivate server
+    
+    Note right of browser: Browser requested the css file before the HTML document for some reason
+    
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
     deactivate server
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
