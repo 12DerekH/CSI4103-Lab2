@@ -3,11 +3,11 @@
 Testing creating a sequence diagram
 ```mermaid
 
-sequenceDiagram
-    participant browser
-    participant server
+sequenceDiagram;
+    participant browser;
+    participant server;
     
-    browser --> server 
+    browser --> server;
 
 
 graph TD;
