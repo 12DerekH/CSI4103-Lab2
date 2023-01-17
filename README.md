@@ -3,7 +3,7 @@
 Testing creating a sequence diagram
 ```mermaid
 
-sequenceDiagram;
+graph sequenceDiagram;
     participant browser;
     participant server;
     
